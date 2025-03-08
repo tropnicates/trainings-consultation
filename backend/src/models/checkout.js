@@ -9,7 +9,7 @@ const checkoutSchema = new mongoose.Schema(
     city: { type: String, required: true },
     state: { type: String, required: true },
     pincode: { type: String, required: true }, 
-    amount: { type: Number, required: true }, 
+    amount: { type: Number}, 
     paymentStatus: { type: String, enum: ["pending", "paid"], default: "pending" },
     paymentId: { type: String, default: null },
   },
