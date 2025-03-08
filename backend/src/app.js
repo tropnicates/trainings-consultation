@@ -10,6 +10,7 @@ import authRoutes from './routes/authRoutes.js';
 import { notFound, errorHandler } from "./middlewares/errorMiddleware.js";
 import consultationRoutes from "./routes/consultRoutes.js";
 import appointmentRoutes from './routes/appointmentRoutes.js';
+import checkoutRoutes from './routes/chechoutRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
 import paymentRoutes from './routes/paymentRoutes.js';
 import "./config/auth.js";
@@ -39,6 +40,7 @@ app.use(passport.session());
 app.use('/api/auth', authRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/appointments', appointmentRoutes);
+app.use('/api/checkouts', checkoutRoutes);
 app.use("/api/consultations", consultationRoutes);
 app.use('/api/payment', paymentRoutes); 
 
